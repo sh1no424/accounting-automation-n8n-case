@@ -1,0 +1,47 @@
+{
+  "document_type": "receipt",
+  "document_status": "draft",
+  "operation_type": "services",
+  "source_document": {
+    "type": "UPD",
+    "number": "UPD-001",
+    "date": "2026-05-20"
+  },
+  "counterparty": {
+    "inn": "0000000000",
+    "kpp": "000000000",
+    "name": "Поставщик 1"
+  },
+  "organization": {
+    "inn": "1111111111",
+    "kpp": "111111111",
+    "name": "Организация 1"
+  },
+  "contract": {
+    "number": "CONTRACT-001",
+    "date": "2026-01-15"
+  },
+  "accounting_accounts": {
+    "settlement_account": "60.01",
+    "advance_account": "60.02",
+    "expense_account": "26",
+    "vat_account": "19.04"
+  },
+  "items": [
+    {
+      "nomenclature": "Услуги",
+      "content": "Услуги по обслуживанию",
+      "quantity": 1,
+      "unit": "шт",
+      "price": 10000.00,
+      "vat_rate": 20,
+      "vat_sum": 2000.00,
+      "total_sum": 12000.00
+    }
+  ],
+  "totals": {
+    "sum_without_vat": 10000.00,
+    "vat_sum": 2000.00,
+    "total_sum": 12000.00
+  }
+}
