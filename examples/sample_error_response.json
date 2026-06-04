@@ -1,0 +1,48 @@
+{
+  "document": {
+    "type": "UPD",
+    "number": "UPD-001",
+    "date": "2026-05-20",
+    "source": "email_scan"
+  },
+  "status": "requires_manual_review",
+  "status_name": "Требует ручной проверки",
+  "checks": {
+    "math_check": {
+      "passed": true,
+      "errors": []
+    },
+    "duplicate_check": {
+      "passed": false,
+      "errors": [
+        {
+          "code": "duplicate_document",
+          "message": "В 1С уже найден документ с таким же номером, датой и контрагентом."
+        }
+      ]
+    },
+    "contract_check": {
+      "passed": false,
+      "errors": [
+        {
+          "code": "contract_not_found",
+          "message": "Договор не найден в 1С по номеру и дате."
+        }
+      ]
+    },
+    "nomenclature_check": {
+      "passed": false,
+      "errors": [
+        {
+          "code": "nomenclature_not_found",
+          "message": "Позиция не сопоставлена со справочником номенклатуры 1С."
+        }
+      ]
+    }
+  },
+  "notification": {
+    "required": true,
+    "channel": "email",
+    "recipient_role": "accountant"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "source": "sbis",
+  "document": {
+    "type": "UPD",
+    "format": "xml",
+    "number": "UPD-001",
+    "date": "2026-05-20",
+    "status": "received"
+  },
+  "supplier": {
+    "name": "Поставщик 1",
+    "inn": "0000000000",
+    "kpp": "000000000"
+  },
+  "buyer": {
+    "name": "Организация 1",
+    "inn": "1111111111",
+    "kpp": "111111111"
+  },
+  "contract": {
+    "number": "CONTRACT-001",
+    "date": "2026-01-15"
+  },
+  "field5a": "Документ об отгрузке №UPD-001 от 20.05.2026",
+  "field5b": "",
+  "amounts": {
+    "sum_without_vat": 10000.00,
+    "vat_rate": 20,
+    "vat_sum": 2000.00,
+    "total_sum": 12000.00
+  },
+  "items": [
+    {
+      "line_number": 1,
+      "type": "service",
+      "name": "Услуги по обслуживанию",
+      "quantity": 1,
+      "unit": "шт",
+      "price": 10000.00,
+      "sum_without_vat": 10000.00,
+      "vat_rate": 20,
+      "vat_sum": 2000.00,
+      "total_sum": 12000.00
+    }
+  ]
+}
