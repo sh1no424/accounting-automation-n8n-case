@@ -44,12 +44,19 @@
 
 ## Документация 
 
-- [Контекст проекта](docs/01_context.md)
-- [Функциональные требования](docs/05_functional_requirements.md)
-- [Нефункциональные требования](docs/06_non_functional_requirements.md)
-- [Бизнес-правила](docs/07_business_rules.md)
-- [Интеграции](docs/08_integrations.md)
-- [Маппинг данных](docs/09_data_mapping.md)
+- [Контекст проекта](01_context.md)
+- [AS IS процесс](02_as_is_process.md)
+- [TO BE процесс](03_to_be_process.md)
+- [Роли и участники](04_roles.md)
+- [Функциональные требования](05_functional_requirements.md)
+- [Нефункциональные требования](06_non_functional_requirements.md)
+- [Бизнес-правила](07_business_rules.md)
+- [Интеграции](08_integrations.md)
+- [Маппинг данных](09_data_mapping.md)
+- [Модель статусов](10_status_model.md)
+- [Обработка ошибок](11_error_handling.md)
+- [Тест-кейсы](12_test_cases.md)
+- [Результаты проекта](13_results.md)
 
 ## Примеры
 
