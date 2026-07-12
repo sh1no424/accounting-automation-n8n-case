@@ -56,6 +56,7 @@
 - [Модель статусов](docs/10_status_model.md)
 - [Обработка ошибок](docs/11_error_handling.md)
 - [Тест-кейсы](docs/12_test_cases.md)
+- [Диаграмма классов](diagrams/classDiagram.png)
 - [Результаты проекта](docs/13_results.md)
 
 ## Примеры
