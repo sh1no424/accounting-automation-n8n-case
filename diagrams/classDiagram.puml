@@ -1,0 +1,103 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class УПД{
+  +Номер: string
+  +Дата: Date
+  +Сумма: decimal
+  +НДС: decimal
+  +Строка5а: string
+  +Строка5б: string
+  +Тип: string
+
+
+  +ПосчитатьСуммуСтрок(): decimal
+  +ОпределитьТип(): string
+  +ПолучитьКлючДубля(): string
+  +ЕстьТовары(): bool
+  +ЕстьУслуги(): bool
+  +ИзДругогоПериода(): bool
+}
+
+class СтрокаУПД{
+  +НомерСтроки: int
+  +НазваниеИзXML: string
+  +Содержание: string
+  +Количество: decimal
+  +Единица: string
+  +Цена: decimal
+  +Сумма: decimal
+  +СтавкаНДС: string
+  +СуммаНДС: decimal
+  +Тип: string
+
+  +ОпределитьТип(): string
+  +ВернутьСодержаниеСтроки(): string
+  +ПроверитьСумму(): bool
+}
+
+class Контрагент{
+  +Название: string
+  +ИНН: string
+  +КПП: string
+  +ТипЛица: string
+  +RefKey1C: string
+
+  +ПроверитьИНН(): bool
+  +ПроверитьКПП(): bool
+  +ПолучитьКлючВ1С(): string
+}
+
+class Номенклатура{
+   +RefKey1C: string
+  +Название1С: string
+  +Код1С: string
+  +Тип: string
+  +СчетУчета: string
+  +ЕдиницаИзмерения: string
+
+  +ПроверитьRefKey(): bool
+  +ЭтоУслуга(): bool
+  +ПолучитьСчетУчета(): string
+}
+
+class Договор{
+  +RefKey1C: string
+  +Название: string
+  +Номер: string
+  +Дата: Date
+  +Тип: string
+
+  +СовпадаетСоСтрокой5а(строка5а: string): bool
+}
+
+class Склад{
+  +RefKey1C: string
+  +Название: string
+  +ИсточникОпределения: string
+  +Score: decimal
+
+  +ПроверитьСклад(): bool
+}
+
+class Документ1С{
+  +RefKey1C: string
+  +Номер: string
+  +Дата: Date
+  +ТипДокумента: string
+  +Создан: bool
+  +Payload: object
+
+  +СобратьPayload(): object
+  +СоздатьВ1С(): bool
+}
+
+УПД "1" *-- "1..*" СтрокаУПД: Имеет
+УПД "1" --> "1" Контрагент: Поставщик
+УПД "1" --> "1" Контрагент: Покупатель
+УПД "1" --> "0..1" Договор
+УПД "1" --> "0..1" Склад
+УПД "1" --> "0..1" Документ1С: Создает
+СтрокаУПД "1" --> "0..1" Номенклатура: Сопоставляется
+
+@enduml
