@@ -1,0 +1,179 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="as-is-upd" name="AS IS — обработка УПД">
+    <mxGraphModel dx="2828" dy="1486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1040" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontStyle=1;fontColor=#172033;" value="AS IS — приём и обработка входящего УПД" vertex="1">
+          <mxGeometry height="42" width="900" x="40" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="poolCounterparty" parent="1" style="swimlane;html=1;horizontal=0;startSize=60;rounded=1;fillColor=#dcfce7;swimlaneFillColor=#ffffff;strokeColor=#94a3b8;fontSize=17;fontStyle=1;" value="Контрагент" vertex="1">
+          <mxGeometry height="175" width="1920" x="40" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="cpEnd" parent="poolCounterparty" style="ellipse;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#16a34a;strokeWidth=3;double=1;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="510" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="poolOrg" parent="1" style="swimlane;html=1;horizontal=0;startSize=60;rounded=1;fillColor=#dbeafe;swimlaneFillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;fontSize=17;fontStyle=1;" value="Бухгалтерская организация" vertex="1">
+          <mxGeometry height="665" width="1920" x="40" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="laneAcc" parent="1" style="swimlane;html=1;horizontal=0;startSize=68;fillColor=#eff6ff;swimlaneFillColor=#ffffff;strokeColor=#94a3b8;fontSize=16;fontStyle=1;" value="Бухгалтер" vertex="1">
+          <mxGeometry height="395" width="1860" x="100" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="laneChief" parent="1" style="swimlane;html=1;horizontal=0;startSize=68;fillColor=#fff1f2;swimlaneFillColor=#ffffff;strokeColor=#94a3b8;fontSize=16;fontStyle=1;" value="Главный бухгалтер" vertex="1">
+          <mxGeometry height="270" width="1860" x="100" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="cpStart" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#16a34a;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="190" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cpSend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#16a34a;strokeWidth=2;fontSize=15;" value="Подготавливает и направляет УПД&lt;br&gt;через ЭДО или почту" vertex="1">
+          <mxGeometry height="84" width="210" x="270" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="cpCorrectionStart" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#dc2626;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="1200" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cpCorrect" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#dc2626;strokeWidth=2;fontSize=15;" value="Исправляет документ&lt;br&gt;по запросу" vertex="1">
+          <mxGeometry height="84" width="190" x="1270" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="cpResend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#16a34a;strokeWidth=2;fontSize=15;" value="Повторно направляет&lt;br&gt;исправленный УПД" vertex="1">
+          <mxGeometry height="84" width="190" x="1510" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="cpCorrectionEnd" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#16a34a;strokeWidth=3;double=1;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="1730" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="accStart" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#2563eb;strokeWidth=3;fontSize=12;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=6;" value="УПД получен" vertex="1">
+          <mxGeometry height="44" width="44" x="188" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="identify" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=2;fontSize=15;" value="Определяет клиента&lt;br&gt;и соответствующую базу 1С" vertex="1">
+          <mxGeometry height="90" width="205" x="270" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="manualCheck" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;strokeWidth=2;fontSize=14;" value="Вручную проверяет:&lt;br&gt;реквизиты, период, дубль,&lt;br&gt;договор, номенклатуру,&lt;br&gt;суммы, НДС и строки 5а/5б" vertex="1">
+          <mxGeometry height="116" width="230" x="530" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="hasErrors" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=2;fontSize=14;" value="Есть&lt;br&gt;ошибки?" vertex="1">
+          <mxGeometry height="90" width="90" x="795" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="open1c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=2;fontSize=15;" value="Открывает базу&lt;br&gt;клиента в 1С" vertex="1">
+          <mxGeometry height="90" width="180" x="945" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="findRefs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=2;fontSize=14;" value="Вручную находит контрагента,&lt;br&gt;договор и номенклатуру&lt;br&gt;в справочниках 1С" vertex="1">
+          <mxGeometry height="116" width="230" x="1175" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="createDoc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=2;fontSize=14;" value="Создаёт документ&lt;br&gt;«Поступление товаров/услуг»&lt;br&gt;и заполняет поля" vertex="1">
+          <mxGeometry height="116" width="230" x="1455" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="postDoc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=2;fontSize=14;" value="Проверяет суммы, НДС&lt;br&gt;и счета учёта,&lt;br&gt;проводит документ в 1С" vertex="1">
+          <mxGeometry height="116" width="180" x="1740" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="accEnd" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#2563eb;strokeWidth=4;double=1;fontSize=12;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=6;" value="Документ отражён в учёте" vertex="1">
+          <mxGeometry height="46" width="46" x="1807" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="escalate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#e11d48;strokeWidth=2;fontSize=14;" value="Передаёт документ и описание&lt;br&gt;проблемы главному бухгалтеру" vertex="1">
+          <mxGeometry height="86" width="180" x="750" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="chiefAnalyze" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#e11d48;strokeWidth=2;fontSize=14;" value="Анализирует ошибку и проверяет&lt;br&gt;спорный случай или исключение" vertex="1">
+          <mxGeometry height="96" width="205" x="750" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="needCorrection" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=2;fontSize=13;" value="Нужно&lt;br&gt;исправление?" vertex="1">
+          <mxGeometry height="90" width="90" x="1005" y="763" as="geometry" />
+        </mxCell>
+        <mxCell id="requestCorrection" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#e11d48;strokeWidth=2;fontSize=14;" value="Запрашивает исправленный УПД&lt;br&gt;у контрагента" vertex="1">
+          <mxGeometry height="86" width="205" x="1170" y="765" as="geometry" />
+        </mxCell>
+        <mxCell id="decideAccounting" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7ed;strokeColor=#ea580c;strokeWidth=2;fontSize=14;" value="Определяет допустимый&lt;br&gt;способ отражения в учёте" vertex="1">
+          <mxGeometry height="66" width="230" x="1020" y="885" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="cpStart" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="cpSend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="cpSend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="cpEnd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="cpCorrectionStart" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="cpCorrect">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="cpCorrect" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="cpResend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="cpResend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="cpCorrectionEnd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="accStart" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="identify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="identify" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="manualCheck">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="manualCheck" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="hasErrors">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="hasErrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;fontStyle=1;" target="open1c" value="Нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="open1c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="findRefs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="findRefs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="createDoc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="createDoc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="postDoc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="postDoc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="accEnd">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1830" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="hasErrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;fontStyle=1;" target="escalate" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="escalate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="chiefAnalyze">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="chiefAnalyze" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;" target="needCorrection">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="needCorrection" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;fontStyle=1;" target="requestCorrection" value="Да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="needCorrection" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#526071;strokeWidth=2;endArrow=block;endFill=1;fontStyle=1;" target="decideAccounting" value="Нет">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="decideAccounting" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#dc2626;strokeWidth=2;dashed=1;dashPattern=6 6;endArrow=block;endFill=1;fontStyle=1;" target="open1c" value="Решение передано бухгалтеру">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="918" />
+              <mxPoint x="1420" y="520" />
+              <mxPoint x="1035" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" source="cpSend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7c3aed;strokeWidth=2;dashed=1;dashPattern=8 6;endArrow=block;endFill=1;fontStyle=1;" target="accStart" value="Входящий УПД">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="375" y="320" />
+              <mxPoint x="210" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" source="requestCorrection" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7c3aed;strokeWidth=2;dashed=1;dashPattern=8 6;endArrow=block;endFill=1;fontStyle=1;" target="cpCorrectionStart" value="Запрос на исправление">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1272" y="300" />
+              <mxPoint x="1220" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" edge="1" parent="1" source="cpResend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7c3aed;strokeWidth=2;dashed=1;dashPattern=8 6;endArrow=block;endFill=1;fontStyle=1;" target="manualCheck" value="Исправленный УПД">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1605" y="335" />
+              <mxPoint x="645" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
