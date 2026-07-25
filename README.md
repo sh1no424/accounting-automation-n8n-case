@@ -42,26 +42,25 @@
 - n8n Data Tables;
 - n8n Webhooks.
 
-## Документация 
+## Документация
+* [Контекст и описание проекта](docs/01_context.md)
+* [Текущий процесс обработки документов — AS-IS](docs/02_as_is_process.md)
+* [Целевой процесс обработки документов — TO-BE](docs/03_to_be_process.md)
+* [Роли и участники процесса](docs/04_roles.md)
+* [Функциональные требования к системе](docs/05_functional_requirements.md)
+* [Нефункциональные требования к системе](docs/06_non_functional_requirements.md)
+* [Основные бизнес-правила](docs/07_business_rules.md)
+* [Описание интеграций](docs/08_integrations.md)
+* [Маппинг данных УПД в 1С](docs/09_data_mapping.md)
+* [Результаты проекта](docs/13_results.md)
+* [Диаграмма классов](diagrams/classDiagram.png)
 
-- [Контекст проекта](docs/01_context.md)
-- [AS IS процесс](docs/02_as_is_process.md)
-- [TO BE процесс](docs/03_to_be_process.md)
-- [Роли и участники](docs/04_roles.md)
-- [Функциональные требования](docs/05_functional_requirements.md)
-- [Нефункциональные требования](docs/06_non_functional_requirements.md)
-- [Бизнес-правила](docs/07_business_rules.md)
-- [Интеграции](docs/08_integrations.md)
-- [Маппинг данных](docs/09_data_mapping.md)
-- [Диаграмма классов](diagrams/classDiagram.png)
-- [Результаты проекта](docs/13_results.md)
+## Примеры данных
 
-## Примеры
-
-- [Пример входящего документа](examples/sample_input_document.json)
-- [Пример данных для 1С](examples/sample_output_to_1c.json)
-- [Пример ошибки обработки](examples/sample_error_response.json)
-- [Пример псевдо-JS валидации](examples/pseudo_js_validation.js)
+* [Пример входящего документа](examples/sample_input_document.json)
+* [Пример данных для создания документа в 1С](examples/sample_output_to_1c.json)
+* [Пример ответа с ошибкой обработки](examples/sample_error_response.json)
+* [Пример логики валидации на JavaScript](examples/pseudo_js_validation.js)
 
 ## Результат 
 
